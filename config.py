@@ -17,13 +17,13 @@ ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "webp"}
 MAX_CONTENT_LENGTH = 10 * 1024 * 1024  # 10MB limit
 
 # API Keys — loaded from .env file
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GROK_API_KEY = os.getenv("GROK_API_KEY", "")
 GOOGLE_TRANSLATE_API_KEY = os.getenv("GOOGLE_TRANSLATE_API_KEY", "")
 GOOGLE_TTS_API_KEY = os.getenv("GOOGLE_TTS_API_KEY", "")
 
-# Warn on startup if Gemini key is missing
-if not GEMINI_API_KEY:
-    print("⚠️  WARNING: GEMINI_API_KEY is not set in .env file. Explanation features will use mock data.")
+# Warn on startup if Grok key is missing
+if not GROK_API_KEY:
+    print("⚠️  WARNING: GROK_API_KEY is not set in .env file. Explanation features will use mock data.")
 
 # App settings
 DEBUG = os.getenv("DEBUG", "True") == "True"

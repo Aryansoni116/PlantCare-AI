@@ -166,14 +166,14 @@ async def speech(request: SpeechRequest):
 @app.post("/chat")
 async def chat(request: ChatRequest):
     """
-    Handle follow-up questions from the farmer via Gemini Chat.
+    Handle follow-up questions from the farmer via Grok Chat.
     """
     try:
-        from explain import chat_with_gemini
+        from explain import chat_with_grok
         if not request.message.strip():
             raise HTTPException(status_code=400, detail="Message cannot be empty")
             
-        response_text = chat_with_gemini(request.message, request.history, request.disease_name)
+        response_text = chat_with_grok(request.message, request.history, request.disease_name)
         return {"response": response_text}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Chat error: {str(e)}")

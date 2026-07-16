@@ -61,8 +61,8 @@ def check_env():
         print("⚠️  WARNING: .env file not found. Create one from .env.example")
     else:
         content = env_path.read_text()
-        if "your_gemini_api_key_here" in content or "GEMINI_API_KEY=" not in content:
-            print("⚠️  WARNING: GEMINI_API_KEY is not set in .env — explanation features will use mock data.")
+        if "your_grok_api_key_here" in content or "GROK_API_KEY=" not in content:
+            print("⚠️  WARNING: GROK_API_KEY is not set in .env — explanation features will use mock data.")
 
 
 # ── Main ─────────────────────────────────────────────────────

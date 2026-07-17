@@ -78,9 +78,9 @@ async def read_root(request: Request):
     Serve the Home Page (index.html).
     """
     return templates.TemplateResponse(
-        "index.html", 
-        {
-            "request": request, 
+        request=request,
+        name="index.html",
+        context={
             "maintenance_mode": config.MAINTENANCE_MODE, 
             "maintenance_time": config.MAINTENANCE_TIME
         }
@@ -190,4 +190,4 @@ async def get_history():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app:app", host="127.0.0.1", port=8080, reload=False)
+    uvicorn.run("app:app", host="0.0.0.0", port=7860, reload=False)

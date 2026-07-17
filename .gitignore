@@ -23,11 +23,11 @@ uploads/
 # Generated audio files
 output_audio/
 
-# Trained model files (too large for git — use Git LFS or share separately)
+# Trained model files (tracked via Git LFS — see .gitattributes)
 model/*.keras
 model/*.h5
 model/*.pb
-model/*.pth
+# model/*.pth  <-- tracked via Git LFS, NOT ignored
 model/*.pt
 
 # IDE / OS files

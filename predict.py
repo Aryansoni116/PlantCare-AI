@@ -47,6 +47,22 @@ class ConvolutionalNetwork(nn.Module):
 num_classes = len(class_names)
 model = ConvolutionalNetwork(num_classes)
 
+# ==========================================
+# AUTO-DOWNLOAD MODEL FROM HF HUB IF MISSING
+# ==========================================
+if not os.path.exists(MODEL_PATH):
+    print("Model weights not found locally. Attempting to download from Hugging Face Hub...")
+    try:
+        from huggingface_hub import hf_hub_download
+        downloaded_path = hf_hub_download(
+            repo_id="aryansoni20/PlantCare-AI-model",
+            filename="plant_disease_resnet18.pth",
+            local_dir=os.path.dirname(MODEL_PATH)
+        )
+        print(f"Model downloaded to {downloaded_path}")
+    except Exception as e:
+        print(f"WARNING: Could not download model from HF Hub: {e}")
+
 if os.path.exists(MODEL_PATH):
     try:
         model.load_state_dict(torch.load(MODEL_PATH, map_location=device))

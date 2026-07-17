@@ -5,3 +5,7 @@ torchvision
 timm
 python-multipart
 Pillow
+huggingface_hub
+python-dotenv
+gtts
+requests

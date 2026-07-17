@@ -1,0 +1,35 @@
+# Git / Version control
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Local environment variables (secrets — never include in image)
+.env
+.env.example
+
+# User-uploaded files (runtime data, not needed in image)
+uploads/
+output_audio/
+
+# Dev / IDE files
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# Test files
+test_*.py
+
+# Docs
+README.md
+LICENSE

@@ -24,7 +24,7 @@ COPY requirements.txt .
 # Install CPU-only PyTorch first (much smaller than CUDA version, fits Railway free tier)
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu && \
-    pip install --no-cache-dir timm fastapi uvicorn python-multipart Pillow huggingface_hub python-dotenv gtts requests
+    pip install --no-cache-dir timm fastapi uvicorn python-multipart Pillow huggingface_hub python-dotenv gtts requests deep-translator
 
 # Copy application source code
 COPY . .

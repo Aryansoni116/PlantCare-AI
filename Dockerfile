@@ -21,10 +21,10 @@ RUN apt-get update && apt-get install -y \
 # Copy requirements first for better Docker layer caching
 COPY requirements.txt .
 
-# Install Python dependencies
+# Install CPU-only PyTorch first (much smaller than CUDA version, fits Railway free tier)
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt && \
-    pip install --no-cache-dir python-dotenv gtts
+    pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu && \
+    pip install --no-cache-dir timm fastapi uvicorn python-multipart Pillow huggingface_hub python-dotenv gtts requests
 
 # Copy application source code
 COPY . .

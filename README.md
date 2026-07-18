@@ -21,5 +21,9 @@ Upload a photo of a plant leaf and get:
 ## Supported Plants
 Apple, Corn (Maize), Pepper, Potato, Tomato — 23 disease classes total.
 
+##Avialable on =[Plant Disease-AI](https://plantcare-ai-production.up.railway.app/)
+
 ## Developed by
 [Debanjan Mondal](https://github.com/debanjan-mondal-2005)
+[Aryan Soni]()
+

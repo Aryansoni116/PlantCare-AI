@@ -26,5 +26,5 @@ Avialable on =[Plant Disease-AI](https://plantcare-ai-production.up.railway.app/
 ## Developed by
 [Debanjan Mondal](https://github.com/debanjan-mondal-2005)
 
-[Aryan Soni]()
+[Aryan Soni](https://github.com/Aryansoni116)
 
